@@ -41,21 +41,25 @@
                 <div id="modal-{{num}}" class="modal">
                   <!-- Modal content -->
                   <div class="modal-content">
-                    <span class="close">Close</span>
-                    <img class="features-img visible-xs visible-sm" src={{imageLinkDesktop}}>
-                    <h2>{{imageTitle}}</h2>
-                    {{#if sponsored}}
-                      <h1>sponsored</h1>
-                    {{/if}}
-                    <p>{{imageCaption}}</p>
-                    <a href="{{shopLink}}" target="_blank">{{shop}}</a>
+                    <span class="close">x</span>
+                      <div class="img-container">
+                        <img class="features-img visible-xs visible-sm" src={{imageLinkDesktop}}>
+                      </div>
+                      <div class="ge-modal-text">
+                        <h3 class="ge-modal-title">{{title}}</h3>
+                        <h1 class="ge-modal-hed">{{imageTitle}}</h1>
+                        {{#if sponsored}}
+                          <h5 class="ge-sponsored">sponsored</h5>
+                        {{/if}}
+                        <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
+                        <a class="ge-modal-shop" href="{{shopLink}}" target="_blank">{{shop}}</a>
+                      </div>
                   </div>
                 </div>
               {{/each}}
             </div>
           {{/each}}
         </div>
-
       </div>
     </script>
   </body>
