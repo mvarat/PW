@@ -1,6 +1,6 @@
 @font-face {
     font-family: brandon-grotesque;
-    src: url(./font/Brandon_reg.otf);
+    src: url(./fonts/Brandon_reg.otf);
 }
 
 $blue: #558af9;
@@ -16,7 +16,7 @@ body {
 // page hed style
 .ge-hed {
   margin-left: 10%;
-  width: 50%;
+  max-width: 700px;;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -53,45 +53,57 @@ li {
 }
 
 .ge-nav{
-  display: inline;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  width: 200px;
-  height: 5px;
-  text-decoration: none;
-  font-size: 10px;
-  font-family: "brandon-grotesque";
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: $blue;
-  font-weight: bold;
-  -webkit-transition: color 2s, font-size .3s;
-  -moz-transition: color 2s, font-size .3s;
-  -o-transition: color 2s, font-size .3s;
-  transition: color 2s, font-size .3s;
-  border-bottom: solid white 7px;
-  &:hover {
-    border: solid pink;
-    border-bottom: solid $blue 7px;
-    font-size: 12px;
-  }
-  &.active {
-    border: solid pink;
-    border-bottom: solid $blue 7px;
-    font-size: 12px;
-  }
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .ge-nav-item {
-    display: inline-flex;
-    margin: auto;
+    box-sizing: border-box;
+    margin: 0px;
+    height: 55px;
+    border-bottom: 7px solid #f9f9f9;
+    display: inline-block;
+    padding: 13px 0;
+    width: 225px;
     text-align: center;
+    font-size: 11.5px;
+    font-family: "brandon-grotesque";
+    color: $blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 2.25px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+      border-color: $blue;
+      font-size: 13px;
+      color: #558af9;
+      letter-spacing: 3.25px;
+      font-weight: 700;
+    }
+}
+
+#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn {
+  box-sizing: border-box;
+  &.active {
+    border-color: $blue;
+    font-size: 13px;
+    color: #558af9;
+    letter-spacing: 3.25px;
+    font-weight: 700;
+  }
 }
 
 // image section style
 #img {
   width: 100vw;
   position: relative;
+  margin-top:-22px;
   margin-bottom: 50px;
 }
 
@@ -137,6 +149,10 @@ li {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   animation-name: pulse;
+}
+
+button {
+  outline: none;
 }
 
 @keyframes pulse {
@@ -190,6 +206,7 @@ li {
     height: 54px;
     width: 54px;
     position: absolute;
+    text-align: center;
     right: -27px;
     top: -27px;
     background-color: #558af9;
@@ -198,6 +215,9 @@ li {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
     transition: opacity .3s ease;
     z-index: 25;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
     &:hover{
       color: black;
       text-decoration: none;
@@ -208,6 +228,14 @@ li {
       text-decoration: none;
       cursor: pointer;
     }
+}
+
+.icon-plussign {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ge-modal-text {
@@ -224,7 +252,6 @@ li {
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
 }
-
 
 .ge-modal-title {
     font-size: 9.25px;
@@ -260,10 +287,26 @@ li {
     margin: 0px;
 }
 
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #7B7A7A;
+    &:hover {
+      color: lighten(#7B7A7A, 20%);
+    }
+}
+
+.italic {
+  font-style: italic;
+}
+
 .ge-modal-shop {
   font-weight: 600;
   color: #7B7A7A;
   text-decoration: none;
+  &:hover {
+    color: #7B7A7A;
+  }
 }
 
 .ge-modal-description {
@@ -273,10 +316,6 @@ li {
   &.a{
     text-decoration: none;
   }
-}
-
-.ge-modal-text-no-img {
-  border: solid red;
 }
 
 .img-container {

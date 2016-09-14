@@ -8,50 +8,57 @@ $(function() {
   var html = template(data);
   $('#DocumentResults').html(html);
   $('#cc').addClass("active");
+  $('#ge-nav-cc').addClass('active');
 
   // nav bar scripts
   $('#ge-nav-cc').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
+    $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
     console.log("add active class to cc");
     $('#cc').addClass('active');
+    $('#ge-nav-cc').addClass('active');
   });
   $('#ge-nav-op').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
+    $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
     console.log("add active class to op");
     $('#op').addClass('active');
+    $('#ge-nav-op').addClass('active');
   });
   $('#ge-nav-cs').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
+    $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
     console.log("add active class to cs");
     $('#cs').addClass('active');
+    $('#ge-nav-cs').addClass('active');
   });
   $('#ge-nav-bn').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
+    $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
     console.log("add active class to bn");
     $('#bn').addClass('active');
+    $('#ge-nav-bn').addClass('active');
   });
 
-  // modal scripts
+  // open modal
   $("button").click(function(event){
-    console.log(event.target);
     console.log("button clicked");
     $(event.target).next(".modal").css("display","block");
   });
 
-  // modal scripts
+  // close modal
   $(".close").click(function(event){
     console.log("modal closed");
     $(".modal").css("display","none");
   });
 
-  // !!!! THIS NEEDS WORK
-  // window.onclick = function(event) {
-  //   console.log(event);
-  //   if (event.target == $("#modal")) {
-  //     console.log("window clicked");
-  //     $("#modal").css("display", "none");
-  //   }
-  // }
+  // close modal when you click outside modal
+  window.onclick = function(event) {
+    if ($(event.target).hasClass("modal")) {
+      console.log("window clicked");
+      $(".modal").css("display", "none");
+    }
+  }
 
 });
 
@@ -73,7 +80,7 @@ var data = {
                         imageLinkDesktop: "./images/desktop/cc-1-desktop.jpg",
                         imageTitle: "Time for a Paint Over",
                         title: "Creative Cabinets",
-                        imageCaption: "If your cabinets are outdated but you’re not ready to replace them, a fresh coat of paint is the fastest, most affordable way to transform your space without a major renovation. Stumped on a color? Look to the flipbook <italic>Pantone: 35 Inspirational Color Palettes</italic> to help you decide (We’re partial to the <a href='http://ecx.images-amazon.com/images/I/611fwx-LRvL.jpg' target='_blank'><strong>Riviera Blue</strong></a>, in case you were wondering).",
+                        imageCaption: "If your cabinets are outdated but you’re not ready to replace them, a fresh coat of paint is the fastest, most affordable way to transform your space without a major renovation. Stumped on a color? Look to the flipbook <div class='italic'>Pantone: 35 Inspirational Color Palettes</div> to help you decide (We’re partial to the <a href='http://ecx.images-amazon.com/images/I/611fwx-LRvL.jpg' target='_blank'><strong>Riviera Blue</strong></a>, in case you were wondering).",
                         shop: "Pantone ($13)",
                         shopLink: "https://www.amazon.com/Pantone-35-Inspirational-Color-Palletes/dp/0811877574/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=pur0e4-20&linkId=5c2aef19f773ce510d9254db1bb938c6",
                     },

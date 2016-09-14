@@ -8,7 +8,8 @@
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -24,10 +25,8 @@
         <div id="ge-nav-row">
           <ul class="ge-nav">
             {{#each sections}}
-              <div class="ge-nav">
-                <li class="ge-nav-item" id="ge-nav-{{class}}">{{title}}</li>
-              </div>
-              {{/each}}
+              <a href="#img-anchor"><li class="ge-nav-item" id="ge-nav-{{class}}">{{title}}</li></a>
+            {{/each}}
           </ul>
         </div>
       </br>
@@ -41,19 +40,29 @@
                 <div id="modal-{{num}}" class="modal">
                   <!-- Modal content -->
                   <div class="modal-content">
-                    <span class="close">x</span>
+                    <span class="close"><div class="library-icomoon"><i class="icon-plussign"></i></div></span>
                       <div class="img-container">
                         <img class="features-img visible-xs visible-sm" src={{imageLinkDesktop}}>
                       </div>
-                      <div class="ge-modal-text">
-                        <h3 class="ge-modal-title">{{title}}</h3>
-                        <h1 class="ge-modal-hed">{{imageTitle}}</h1>
-                        {{#if sponsored}}
-                          <h5 class="ge-sponsored">sponsored</h5>
-                        {{/if}}
-                        <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
-                        <a class="ge-modal-shop" href="{{shopLink}}" target="_blank">{{shop}}</a>
-                      </div>
+                      {{#if imageLinkDesktop}}
+                        <div class="ge-modal-text">
+                          <h3 class="ge-modal-title">{{title}}</h3>
+                          <h1 class="ge-modal-hed">{{imageTitle}}</h1>
+                          {{#if sponsored}}
+                            <span class="glyphicons glyphicons-remove"></span>
+                            <h5 class="ge-sponsored">sponsored</h5>
+                          {{/if}}
+                          <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
+                          <a class="ge-modal-shop" href="{{shopLink}}" target="_blank">{{shop}}</a>
+                        </div>
+                      {{/if}}
+                      <!-- {{#unless imageLinkDesktop}}
+                        <div class="ge-modal-text">
+                          <h3 class="ge-modal-title">{{title}}</h3>
+                          <h1 class="ge-modal-hed">{{imageTitle}}</h1>
+                          <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
+                        </div>
+                      {{/unless}} -->
                   </div>
                 </div>
               {{/each}}
@@ -62,5 +71,6 @@
         </div>
       </div>
     </script>
+
   </body>
 </html>
