@@ -34,15 +34,19 @@
         <div id="img">
           {{#each sections}}
             <div id="{{class}}">
-              <img class="ge-main-img ge-{{class}}-img" src={{image}}>
+              <img class="ge-main-img ge-{{class}}-img" src={{imageDesktop}}>
               <div class="img-credit">{{credit}}</div>
               {{#each features}}
                 <button id="btn-{{num}}"class="ge-btns-overlay ge-btn pulse ge-{{class}}-btn" style="top:{{yval}};left:{{xval}};">+</button>
-                <div id="modal" class="modal">
+                <div id="modal-{{num}}" class="modal">
                   <!-- Modal content -->
                   <div class="modal-content">
-                    <span class="close">x</span>
+                    <span class="close">Close</span>
+                    <img class="features-img visible-xs visible-sm" src={{imageLinkDesktop}}>
                     <h2>{{imageTitle}}</h2>
+                    {{#if sponsored}}
+                      <h1>sponsored</h1>
+                    {{/if}}
                     <p>{{imageCaption}}</p>
                     <a href="{{shopLink}}" target="_blank">{{shop}}</a>
                   </div>
