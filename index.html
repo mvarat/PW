@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GE DESTIE</title>
+    <script src="handlebars-v4.0.5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="ge-hed">
+      <h1 class="ge-hed-line1">The Ultimate Guide To</h1>
+      <h1 class="ge-hed-line2">Styling Your Kitchen</h1>
+      <h1 class="ge-hed-line3">For those of you who get excited when you hear the words farmhouse sinks and open-shelving, get ready for our master guide to refreshing your kitchen from top to reclaimed-wood-floor bottom.</h1>
+    </div>
+    <div id="DocumentResults"></div>
+    <script id="ge-template" type="text/x-handlebars-template">
+      <div>
+        <div id="img-anchor"></div>
+        <div id="ge-nav-row">
+          <ul class="ge-nav">
+            {{#each sections}}
+              <div class="ge-nav">
+                <li class="ge-nav-item" id="ge-nav-{{class}}">{{title}}</li>
+              </div>
+              {{/each}}
+          </ul>
+        </div>
+      </br>
+        <div id="img">
+          {{#each sections}}
+            <div id="{{class}}">
+              <img class="ge-main-img ge-{{class}}-img" src={{image}}>
+              <div class="img-credit">{{credit}}</div>
+              {{#each features}}
+                <button id="btn-{{num}}"class="ge-btns-overlay ge-btn pulse ge-{{class}}-btn" style="top:{{yval}};left:{{xval}};">+</button>
+                <div id="modal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">x</span>
+                    <h2>{{imageTitle}}</h2>
+                    <p>{{imageCaption}}</p>
+                    <a href="{{shopLink}}" target="_blank">{{shop}}</a>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+
+      </div>
+    </script>
+  </body>
+</html>
