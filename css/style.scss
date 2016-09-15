@@ -13,13 +13,24 @@ body {
   background-color: #fff;
 }
 
+.ge-main-container {
+  margin: auto;
+	width: 1280px;
+	padding-left: 0;
+	padding-right: 0;
+	@media (max-width: 1280px) {
+		width: 100%;
+	}
+}
+
 // page hed style
 .ge-hed {
   margin-left: 10%;
-  max-width: 700px;;
+  max-width: 650px;;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 h1 {
   &.ge-hed-line1 {
     font-size: 14px;
@@ -39,6 +50,9 @@ h1 {
     font-family: 'Freight Display Pro',serif;
     font-weight: lighter;
     line-height: 1.5em;
+  }
+  &.ge-hed-line4-mobile {
+    display: none;
   }
 }
 
@@ -63,10 +77,11 @@ li {
 .ge-nav-item {
     box-sizing: border-box;
     margin: 0px;
+    margin-right: -4px;
     height: 55px;
-    border-bottom: 7px solid #f9f9f9;
+    border-bottom: 10px solid #f9f9f9;
     display: inline-block;
-    padding: 13px 0;
+    padding: 1px 0;
     width: 225px;
     text-align: center;
     font-size: 11.5px;
@@ -80,7 +95,8 @@ li {
     transition: all .3s ease;
 
     &:hover {
-      border-color: $blue;
+      z-index: 1000;
+      border-bottom: 10px solid $blue;
       font-size: 13px;
       color: #558af9;
       letter-spacing: 3.25px;
@@ -91,6 +107,7 @@ li {
 #ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn {
   box-sizing: border-box;
   &.active {
+    z-index: 100;
     border-color: $blue;
     font-size: 13px;
     color: #558af9;
@@ -101,14 +118,14 @@ li {
 
 // image section style
 #img {
-  width: 100vw;
+  width: 100%;
   position: relative;
   margin-top:-22px;
   margin-bottom: 50px;
 }
 
 .ge-main-img {
-  width: 95%;
+  width: 100%;
   text-align: center;
   display: block;
   margin: auto;
@@ -155,20 +172,47 @@ button {
   outline: none;
 }
 
+/* Pulse Animation (credits to Justin Aguilar at www.justinaguilar.com/animations/) */
+.pulse{
+	animation-name: pulse;
+	-webkit-animation-name: pulse;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
 @keyframes pulse {
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+	0% {
+		transform: scale(0.85);
+		opacity: 0.7;
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.85);
+		opacity: 0.7;
+	}
 }
 
 @-webkit-keyframes pulse {
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+	0% {
+		-webkit-transform: scale(0.85);
+		opacity: 0.7;
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(0.85);
+		opacity: 0.7;
+	}
 }
-
 // modal style
 
 // modal background
@@ -298,6 +342,7 @@ a {
 
 .italic {
   font-style: italic;
+
 }
 
 .ge-modal-shop {
@@ -330,8 +375,167 @@ a {
   height: auto;
 }
 
-
 ::selection {
   color: rgb(255, 255, 255);
   background: rgb(238, 79, 79);
+}
+
+// hidden tablet and mobile style
+.ge-tablet {
+  height: 100vh;
+  display: none;
+}
+.ge-tablet-icon {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ge-tablet-text {
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 5.25px;
+  font-family: "brandon-grotesque";
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.9;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  position: absolute;
+  top: 50%;
+  display: none;
+}
+
+.ge-img-mobile, .ge-section-title-mobile {
+  display: none;
+}
+
+// TABLET
+@media (min-width: 768px) and (max-width: 1024px) {
+  html, body {
+    // no scroll if portrait
+    @media (orientation: portrait) {
+      overflow: hidden;
+      height: 100%;
+    }
+    //scroll if landscaoe
+    @media (orientation: landscape) {
+      overflow: auto;
+      height: auto;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .ge-tablet, .ge-tablet-icon, .ge-tablet-text {
+      display: block;
+    }
+  }
+
+}
+
+// MOBILE
+@media (max-width: 767px) {
+
+  .ge-hed {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
+    background-image: url(../images/mobile/header-image-mobile.png);
+    background-size: contain;
+    height: 100vh;
+  }
+
+  h1 {
+    &.ge-hed-line1 {
+      padding-top: 40%;
+      font-family: "brandon-grotesque";
+      text-transform: uppercase;
+      font-size: 12.5px;
+      line-height: 19.13px;
+      letter-spacing: 3.75px;
+      margin: 12px 0;
+      color: #fff;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    &.ge-hed-line2 {
+      font-size: 64px;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin: 5px 0 30px 0;
+      color: #fff;
+
+    }
+    &.ge-hed-line3 {
+      display: none;
+    }
+    &.ge-hed-line4-mobile {
+      display: block;
+      font-family: "brandon-grotesque";
+      text-transform: uppercase;
+      font-size: 12.5px;
+      line-height: 19.13px;
+      letter-spacing: 3.75px;
+      margin: 12px 0;
+      color: #fff;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+  .ge-nav, .ge-main-img, .modal, button {
+    display: none;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  .ge-img-mobile {
+    display: block;
+    height: 100vh;
+  }
+
+  #img {
+    display: block;
+    margin: 0;
+    margin-top: -45px;
+  }
+
+  #cc, #op, #cs, #bn {
+    position: relative;
+    display: block;
+  }
+
+  .ge-section-title-mobile {
+    display: block;
+    margin: 0px;
+    font-size: 50px;
+    font-family: 'Freight Display Pro',serif;
+    font-weight: lighter;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    z-index: 101;
+    line-height: 55px;
+    width: 200px;
+  }
+
+  .img-credit {
+    font-size: 10px;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
 }

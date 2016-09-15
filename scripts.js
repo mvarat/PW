@@ -68,7 +68,7 @@ var data = {
             {
                 title: "Creative Cabinets",
                 imageDesktop: "./images/desktop/cc-desktop.jpg",
-                imageMobile: "./images/mobile/cc-mobile.jpg",
+                imageMobile: "./images/mobile/cc-mobile.png",
                 credit: "GE Appliances",
                 class: "cc",
                 features: [
@@ -140,7 +140,7 @@ var data = {
             {
               title: "Organized Pantry",
               imageDesktop: "./images/desktop/op-desktop.jpg",
-              imageMobile: "./images/mobile/op-mobile.jpg",
+              imageMobile: "./images/mobile/op-mobile.png",
               credit: "Getty Images",
               class: "op",
               features: [
@@ -195,7 +195,7 @@ var data = {
           {
             title: "Clever Storage",
             imageDesktop: "./images/desktop/cs-desktop.jpg",
-            imageMobile: "./images/mobile/cs-mobile.jpg",
+            imageMobile: "./images/mobile/cs-mobile.png",
             credit: "GE Appliances",
             class: "cs",
             features: [
@@ -253,7 +253,7 @@ var data = {
           {
             title: "Breakfast Nook",
             imageDesktop: "./images/desktop/bn-desktop.jpg",
-            imageMobile: "./images/mobile/bn-mobile.jpg",
+            imageMobile: "./images/mobile/bn-mobile.png",
             credit: "Amber Interiors",
             class: "bn",
             features: [
