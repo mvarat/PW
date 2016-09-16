@@ -64,6 +64,10 @@ $(function() {
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     // $('#fullpage').fullpage();
+    $(".ge-mobile-arrow").click(function(event){
+      alert("I've been clicked");
+    });
+
   }
 
     // var position = $(window).scrollTop();
