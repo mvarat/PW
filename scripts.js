@@ -63,8 +63,8 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    console.log("I am on a Mobile Device");
-    
+    alert("I am on a Mobile Device");
+
 
   }
   else {
