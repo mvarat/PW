@@ -63,7 +63,7 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    $('#fullpage').fullpage();
+    // $('#fullpage').fullpage();
   }
 
     // var position = $(window).scrollTop();
