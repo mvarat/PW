@@ -438,6 +438,9 @@ a {
 // MOBILE
 @media (max-width: 767px) {
 
+  body {
+    background-color: navy;
+  }
   .ge-hed {
     margin: 0;
     padding: 0;
@@ -495,6 +498,7 @@ a {
     margin: 0;
     padding: 0;
   }
+
   .ge-img-mobile {
     display: block;
     height: 100vh;
