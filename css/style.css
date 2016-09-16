@@ -345,7 +345,7 @@ a {
   top: 50%;
   display: none; }
 
-.ge-img-mobile, .ge-section-title-mobile {
+.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-arrow {
   display: none; }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -447,6 +447,31 @@ a {
     font-weight: bold;
     position: absolute;
     right: 10px;
-    bottom: 10px; } }
+    bottom: 10px; }
+
+  .icon-thin-arrow {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    font-size: 30px;
+    top: 13px;
+    left: 11px; }
+    .icon-thin-arrow:before {
+      content: "\e636"; }
+
+  .ge-mobile-arrow {
+    display: block;
+    cursor: pointer;
+    height: 54px;
+    width: 54px;
+    position: absolute;
+    text-align: center;
+    right: 10%;
+    bottom: 40%;
+    background-color: #558af9;
+    opacity: .93;
+    border-radius: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28); } }
 
 /*# sourceMappingURL=style.css.map */

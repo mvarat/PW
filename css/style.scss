@@ -98,7 +98,7 @@ li {
       z-index: 1000;
       border-bottom: 10px solid $blue;
       font-size: 13px;
-      color: #558af9;
+      color: $blue;
       letter-spacing: 3.25px;
       font-weight: 700;
     }
@@ -110,7 +110,7 @@ li {
     z-index: 100;
     border-color: $blue;
     font-size: 13px;
-    color: #558af9;
+    color: $blue;
     letter-spacing: 3.25px;
     font-weight: 700;
   }
@@ -253,7 +253,7 @@ button {
     text-align: center;
     right: -27px;
     top: -27px;
-    background-color: #558af9;
+    background-color: $blue;
     opacity: .93;
     border-radius: 100%;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
@@ -408,7 +408,7 @@ a {
   display: none;
 }
 
-.ge-img-mobile, .ge-section-title-mobile {
+.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-arrow {
   display: none;
 }
 
@@ -545,6 +545,35 @@ a {
     position: absolute;
     right: 10px;
     bottom: 10px;
+  }
+
+  .icon-thin-arrow {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    font-size: 30px;
+    top: 13px;
+    left: 11px;
+    &:before {
+      content: "\e636";
+    }
+
+  }
+
+  .ge-mobile-arrow {
+    display: block;
+    cursor: pointer;
+    height: 54px;
+    width: 54px;
+    position: absolute;
+    text-align: center;
+    right: 10%;
+    bottom: 40%;
+    background-color: $blue;
+    opacity: .93;
+    border-radius: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
   }
 
 }
