@@ -1,6 +1,5 @@
 console.log("loaded");
 
-
 $(function() {
   $("#includedBody").load("body.html");
   var source = $("#ge-template").html();
@@ -60,6 +59,15 @@ $(function() {
     }
   }
 
+  // checks if being viewed on mobile
+  var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+  console.log("Is Mobile: " + isMobile.matches);
+  if (isMobile.matches) {
+    console.log("I am on a Mobile Device");
+  }
+  else {
+    console.log("I am not on a Mobile Device");
+  }
 });
 
 
