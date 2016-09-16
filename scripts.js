@@ -63,16 +63,15 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    $('.ge-main-container').scroll(function () {
-    alert("I am scrolling...");
-    var fuller = $(this).closest('.fullscreen').next(),
-        section = $(this).closest('.ge-main-container');
+    $(window).scroll(function () {
+      alert("I am scrolling...");
+      var fuller = $(this).closest('.fullscreen').next(),
+          section = $(this).closest('.ge-main-container');
 
-    section.animate({
+      section.animate({
         scrollTop: section.scrollTop() + fuller.offset().top
-    }, 700);
-
-});
+      }, 700);
+    });
 
   }
   else {
