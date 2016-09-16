@@ -63,20 +63,45 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    $(window).scroll(function () {
-      alert("I am scrolling...");
-      var fuller = $(this).closest('.fullscreen').next(),
-          section = $(this).closest('.ge-main-container');
-
-      section.animate({
-        scrollTop: section.scrollTop() + fuller.offset().top
-      }, 700);
-    });
-
+    $('#fullpage').fullpage();
   }
-  else {
-    console.log("I am not on a Mobile Device");
-  }
+
+    // var position = $(window).scrollTop();
+    // $(window).scroll(function () {
+    //   console.log("scrolling with my homies");
+    //   var scroll = $(window).scrollTop();
+    //   console.log("scroll: " + scroll);
+    //   console.log("position: " + position);
+    //   if (scroll > position) {
+    //     console.log("I am scrolling down");
+    //     console.log(this);
+    //     var section = $(this).closest('.fullscreen').next();
+    //     var container = $(this).closest('.ge-main-container');
+    //     console.log("section");
+    //     console.log(section);
+    //     console.log("container");
+    //     console.log(container);
+    //     // container.animate({
+    //     //   scrollTop: container.scrollTop() + section.offset().top
+    //     // }, 700);
+    //   }
+    //
+    //   else {
+    //     console.log("I am scrolling up");
+    //     var fuller = $(this).closest('.fullscreen').prev(),
+    //         section = $(this).closest('.ge-main-container');
+    //
+    //     // section.animate({
+    //     //   scrollTop: section.scrollTop() + fuller.offset().top
+    //     // }, 700);
+    //   }
+
+    // });
+
+  // }
+  // else {
+  //   console.log("I am not on a Mobile Device");
+  // }
 });
 
 
