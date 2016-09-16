@@ -64,7 +64,16 @@ $(function() {
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     alert("I am on a Mobile Device");
+    $('html').scroll(function () {
 
+    var fuller = $(this).closest('.fullscreen').next(),
+        section = $(this).closest('.ge-main-container');
+
+    section.animate({
+        scrollTop: section.scrollTop() + fuller.offset().top
+    }, 700);
+
+});
 
   }
   else {
