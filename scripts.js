@@ -63,7 +63,7 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    $('html').scroll(function () {
+    $('.ge-main-container').scroll(function () {
     alert("I am scrolling...");
     var fuller = $(this).closest('.fullscreen').next(),
         section = $(this).closest('.ge-main-container');
