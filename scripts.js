@@ -64,6 +64,8 @@ $(function() {
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     console.log("I am on a Mobile Device");
+    
+
   }
   else {
     console.log("I am not on a Mobile Device");
