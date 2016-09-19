@@ -69,17 +69,17 @@ $(function() {
       $("#ge-mobile-btn-cc").click(function(event){
         if ( $("#ge-mobile-btn-cc").hasClass("open-arrow") ) {
           console.log("has class open arrow");
-          $(".slide-in-mobile-cc").animate({right:0},350);
-          $("#ge-mobile-btn-cc").animate({left:"2%"},350);
-          $(".ge-section-title-cc").animate({left:-200},350);
+          $(".slide-in-mobile-cc").animate({right:0},100);
+          $("#ge-mobile-btn-cc").animate({left:"2%"},100);
+          $(".ge-section-title-cc").animate({left:-250},300);
           $("#ge-mobile-btn-cc").removeClass("open-arrow");
           $("#ge-mobile-btn-cc").addClass("close-arrow");
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-cc").animate({right:-350},350);
-          $("#ge-mobile-btn-cc").animate({left:"70%"},350);;
-          $(".ge-section-title-cc").animate({left:40},350);
+          $(".slide-in-mobile-cc").animate({right:-450},100);
+          $("#ge-mobile-btn-cc").animate({left:"70%"},100);;
+          $(".ge-section-title-cc").animate({left:40},300);
           $("#ge-mobile-btn-cc").removeClass("close-arrow");
           $("#ge-mobile-btn-cc").addClass("open-arrow");
         }
@@ -89,17 +89,17 @@ $(function() {
       $("#ge-mobile-btn-op").click(function(event){
         if ( $("#ge-mobile-btn-op").hasClass("open-arrow") ) {
           console.log("has class open arrow");
-          $(".slide-in-mobile-op").animate({right:0},350);
-          $("#ge-mobile-btn-op").animate({left:"2%"},350);
-          $(".ge-section-title-op").animate({left:-200},350);
+          $(".slide-in-mobile-op").animate({right:0},100);
+          $("#ge-mobile-btn-op").animate({left:"2%"},100);
+          $(".ge-section-title-op").animate({left:-250},300);
           $("#ge-mobile-btn-op").removeClass("open-arrow");
           $("#ge-mobile-btn-op").addClass("close-arrow");
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-op").animate({right:-350},350);
-          $("#ge-mobile-btn-op").animate({left:"70%"},350);;
-          $(".ge-section-title-op").animate({left:40},350);
+          $(".slide-in-mobile-op").animate({right:-450},100);
+          $("#ge-mobile-btn-op").animate({left:"70%"},100);;
+          $(".ge-section-title-op").animate({left:40},300);
           $("#ge-mobile-btn-op").removeClass("close-arrow");
           $("#ge-mobile-btn-op").addClass("open-arrow");
         }
@@ -109,17 +109,17 @@ $(function() {
       $("#ge-mobile-btn-cs").click(function(event){
         if ( $("#ge-mobile-btn-cs").hasClass("open-arrow") ) {
           console.log("has class open arrow");
-          $(".slide-in-mobile-cs").animate({right:0},350);
-          $("#ge-mobile-btn-cs").animate({left:"2%"},350);
-          $(".ge-section-title-cs").animate({left:-200},350);
+          $(".slide-in-mobile-cs").animate({right:0},100);
+          $("#ge-mobile-btn-cs").animate({left:"2%"},100);
+          $(".ge-section-title-cs").animate({left:-250},300);
           $("#ge-mobile-btn-cs").removeClass("open-arrow");
           $("#ge-mobile-btn-cs").addClass("close-arrow");
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-cs").animate({right:-350},350);
-          $("#ge-mobile-btn-cs").animate({left:"70%"},350);;
-          $(".ge-section-title-cs").animate({left:40},350);
+          $(".slide-in-mobile-cs").animate({right:-450},100);
+          $("#ge-mobile-btn-cs").animate({left:"70%"},100);;
+          $(".ge-section-title-cs").animate({left:40},300);
           $("#ge-mobile-btn-cs").removeClass("close-arrow");
           $("#ge-mobile-btn-cs").addClass("open-arrow");
         }
@@ -130,17 +130,17 @@ $(function() {
       $("#ge-mobile-btn-bn").click(function(event){
         if ( $("#ge-mobile-btn-bn").hasClass("open-arrow") ) {
           console.log("has class open arrow");
-          $(".slide-in-mobile-bn").animate({right:0},350);
-          $("#ge-mobile-btn-bn").animate({left:"2%"},350);
-          $(".ge-section-title-bn").animate({left:-200},350);
+          $(".slide-in-mobile-bn").animate({right:0},100);
+          $("#ge-mobile-btn-bn").animate({left:"2%"},100);
+          $(".ge-section-title-bn").animate({left:-250},300);
           $("#ge-mobile-btn-bn").removeClass("open-arrow");
           $("#ge-mobile-btn-bn").addClass("close-arrow");
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-bn").animate({right:-350},350);
-          $("#ge-mobile-btn-bn").animate({left:"70%"},350);;
-          $(".ge-section-title-bn").animate({left:40},350);
+          $(".slide-in-mobile-bn").animate({right:-450},100);
+          $("#ge-mobile-btn-bn").animate({left:"70%"},100);;
+          $(".ge-section-title-bn").animate({left:40},300);
           $("#ge-mobile-btn-bn").removeClass("close-arrow");
           $("#ge-mobile-btn-bn").addClass("open-arrow");
         }
