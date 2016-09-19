@@ -425,6 +425,9 @@ a {
     position: relative;
     display: block; }
 
+  .ge-main-container {
+    overflow-x: hidden; }
+
   .ge-section-title-mobile {
     display: block;
     margin: 0px;

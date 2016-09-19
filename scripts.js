@@ -64,30 +64,70 @@ $(function() {
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     $('#fullpage').fullpage();
+    //
+    // $(".close-arrow").click(function(event){
+    //   console.log(event);
+    //   console.log("close clicked");
+    //   alert("CLOSE clicked");
+    //   $(".slide-in-mobile").animate({right:-300},350);
+    //   $(event.target).animate({left:300},350);;
+    //   $(".ge-section-title-mobile").animate({left:0},350);
+    //   $(event.target).removeClass("close-arrow");
+    //   $(event.target).addClass("open-arrow");
+    //
+    // });
+    //
+      $(".ge-mobile-btn-cc").click(function(event){
+        console.log("cc clicked");
+        $(".slide-in-mobile-cc").animate({right:0},350);
+        $(".ge-mobile-btn-cc").animate({left:"2%"},350);
+        $(".ge-section-title-cc").animate({left:-200},350);
+        $(".ge-mobile-btn-cc").removeClass("open-arrow");
+        $(".ge-mobile-btn-cc").addClass("close-arrow");
+      });
 
-    $(".close-arrow").click(function(event){
-      console.log(event);
-      console.log("close clicked");
-      alert("CLOSE clicked");
-      $(".slide-in-mobile").animate({right:-300},350);
-      $(".ge-mobile-btn").animate({left:300},350);;
-      $(".ge-section-title-mobile").animate({left:0},350);
-      $(event.target).removeClass("close-arrow");
-      $(event.target).addClass("open-arrow");
+      $(".ge-mobile-btn-op").click(function(event){
+        console.log("op clicked");
+        $(".slide-in-mobile-op").animate({right:0},350);
+        $(".ge-mobile-btn-op").animate({left:"2%"},350);
+        $(".ge-section-title-op").animate({left:-200},350);
+        $(".ge-mobile-btn-op").removeClass("open-arrow");
+        $(".ge-mobile-btn-op").addClass("close-arrow");
+      });
 
-    });
+      $(".ge-mobile-btn-cs").click(function(event){
+        console.log("op clicked");
+        $(".slide-in-mobile-cs").animate({right:0},350);
+        $(".ge-mobile-btn-cs").animate({left:"2%"},350);
+        $(".ge-section-title-cs").animate({left:-200},350);
+        $(".ge-mobile-btn-cs").removeClass("open-arrow");
+        $(".ge-mobile-btn-cs").addClass("close-arrow");
+      });
 
-    $(".open-arrow").click(function(event){
-      console.log("open clicked");
-      console.log(event);
-       alert("OPEN clicked");
-      $(".slide-in-mobile").animate({right:0},350);
-      $(".ge-mobile-btn").animate({left:"2%"},350);
-      $(".ge-section-title-mobile").animate({left:-200},350);
-      $(event.target).removeClass("open-arrow");
-      $(event.target).addClass("close-arrow");
+      $(".ge-mobile-btn-bn").click(function(event){
+        console.log("op clicked");
+        $(".slide-in-mobile-bn").animate({right:0},350);
+        $(".ge-mobile-btn-bn").animate({left:"2%"},350);
+        $(".ge-section-title-bn").animate({left:-200},350);
+        $(".ge-mobile-btn-bn").removeClass("open-arrow");
+        $(".ge-mobile-btn-bn").addClass("close-arrow");
+      });
 
-    });
+    // $("ge-mobile-btn-cc").click(function(event){
+    //   console.log("open clicked");
+    //   console.log(event.target);
+    //    alert("OPEN clicked");
+    //   $(".slide-in-mobile").animate({right:0},350);
+    //   $(event.target).animate({left:"2%"},350);
+    //   $(".ge-section-title-mobile").animate({left:-200},350);
+    //   console.log(event.target.next);
+    //   // $(".ge-section-title-mobile").animate({left:-200},350);
+    //   $(event.target).removeClass("open-arrow");
+    //   $(event.target).addClass("close-arrow");
+    // });
+
+
+
 
   }
   else {
