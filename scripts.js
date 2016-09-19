@@ -1,10 +1,10 @@
 console.log("loaded");
 
-function openNav() {
-  console.log("open clicked");
-  // $("#mySidenav").css("width", "380px") ;
-  // $("#main").css("marginLeft", "380px");
-}
+// function openNav() {
+//   console.log("open clicked");
+//   // $("#mySidenav").css("width", "380px") ;
+//   // $("#main").css("marginLeft", "380px");
+// }
 
 
 $(function() {
@@ -71,9 +71,26 @@ $(function() {
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     // $('#fullpage').fullpage();
-    $(".ge-mobile-arrow").click(function(event){
-      // alert("I've been clicked");
+    $(".open-arrow").click(function(event){
+      console.log("open clicked");
+       alert("OPEN clicked");
       $(".slide-in-mobile").animate({right:0},350);
+      $(".ge-mobile-btn").animate({left:"2%"},350);
+      $(".ge-section-title-mobile").animate({left:-200},350);
+      $(".ge-mobile-btn").removeClass("open-arrow");
+      $(".ge-mobile-btn").addClass("close-arrow");
+
+    });
+
+    $(".close-arrow").click(function(event){
+      console.log("close clicked");
+      alert("CLOSE clicked");
+      $(".slide-in-mobile").animate({right:-300},350);
+      $(".ge-mobile-btn").animate({left:300},350);;
+      $(".ge-section-title-mobile").animate({left:0},350);
+      $(".ge-mobile-btn").removeClass("close-arrow");
+      $(".ge-mobile-btn").addClass("open-arrow");
+
     });
 
   }
