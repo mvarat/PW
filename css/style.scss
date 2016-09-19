@@ -408,7 +408,7 @@ a {
   display: none;
 }
 
-.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-arrow {
+.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-arrow, .mobile-features, .ge-mobile-section-hed {
   display: none;
 }
 
@@ -500,6 +500,7 @@ a {
     display: block;
     height: 100vh;
     width: 100vw;
+    z-index: 1000;
   }
 
   #img {
@@ -562,6 +563,7 @@ a {
   }
 
   .ge-mobile-arrow {
+    z-index: 10000;
     display: block;
     cursor: pointer;
     height: 54px;
@@ -576,4 +578,70 @@ a {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
   }
 
+  .mobile-features {
+    display: block;
+    width: 80%;
+    padding: 30px;
+    position: relative;
+  }
+
+  .features-img-mobile {
+    width: 100%;
+  }
+
+  .ge-features-title-mobile {
+    color: #7B7A7A;
+    font-family: 'Lora', serif;
+    font-weight: 200;
+    font-size: 34px;
+    letter-spacing: -1px;
+    line-height: 40px;
+    padding-bottom: 15px;
+    padding-top: 3px;
+    margin: 0px;
+  }
+
+  .ge-features-description-mobile {
+      // float: right;
+      // width: 45%;
+      text-align: left;
+      // padding: 35px 60px 5px 5px;
+      font-size: 14.75px;
+      line-height: 1.39;
+      // margin: 0px;
+      font-family: "freight-text-pro";
+      font-weight: 400;
+      color: #7B7A7A;
+      text-decoration: none;
+  }
+
+  .ge-features-shop-mobile {
+
+  }
+
+  .ge-mobile-section-hed {
+    display: block;
+    height: 50px;
+    background-color: $blue;
+    color: white;
+    font-size: 14px;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .slide-in-mobile {
+    border: solid green;
+    height: 100vh;
+    // overflow: scroll;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -300px;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
 }

@@ -1,5 +1,12 @@
 console.log("loaded");
 
+function openNav() {
+  console.log("open clicked");
+  // $("#mySidenav").css("width", "380px") ;
+  // $("#main").css("marginLeft", "380px");
+}
+
+
 $(function() {
   $("#includedBody").load("body.html");
   var source = $("#ge-template").html();
@@ -66,9 +73,12 @@ $(function() {
     // $('#fullpage').fullpage();
     $(".ge-mobile-arrow").click(function(event){
       alert("I've been clicked");
+      // $("#slide").animate({width:'toggle'},350);
     });
 
   }
+
+
 
     // var position = $(window).scrollTop();
     // $(window).scroll(function () {

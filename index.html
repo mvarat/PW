@@ -45,8 +45,24 @@
                 <img class="ge-main-img ge-{{class}}-img" src={{imageDesktop}}>
                 <img class="ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
                 <div class="ge-section-title-mobile">{{title}}</div>
-                <div class="ge-mobile-arrow"><div class="library-icomoon"><i class="icon-thin-arrow"></i></div></div>
+                <span class="ge-mobile-arrow" onClick=openNav()><div class="library-icomoon"><i class="icon-thin-arrow"></i></div></span>
                 <div class="img-credit">{{credit}}</div>
+                <!-- MOBILE CONTENT -->
+                  <div class="slide-in-mobile">
+                    <div class="ge-mobile-section-hed">{{title}}</div>
+                    <div class="mobile-features">
+                      {{#each features}}
+                        <img class="features-img-mobile " src={{imageLinkMobile}}>
+                        <h1 class="ge-features-title-mobile">{{imageTitle}}</h1>
+                        {{#if sponsored}}
+                          <h5 class="ge-sponsored">sponsored</h5>
+                        {{/if}}
+                        <h4 class="ge-features-description-mobile">{{{imageCaption}}}</h4>
+                        <a class="ge-features-shop-mobile" href="{{shopLink}}" target="_blank">{{shop}}</a>
+                      {{/each}}
+                    </div>
+                  </div>
+                <!-- END MOBILE -->
                 {{#each features}}
                   <button id="btn-{{num}}"class="ge-btns-overlay ge-btn pulse ge-{{class}}-btn" style="top:{{yval}};left:{{xval}};">+</button>
                   <div id="modal-{{num}}" class="modal">
@@ -54,7 +70,7 @@
                     <div class="modal-content">
                       <span class="close"><div class="library-icomoon"><i class="icon-plussign"></i></div></span>
                         <div class="img-container">
-                          <img class="features-img visible-xs visible-sm" src={{imageLinkDesktop}}>
+                          <img class="features-img" src={{imageLinkDesktop}}>
                         </div>
                         {{#if imageLinkDesktop}}
                           <div class="ge-modal-text">
