@@ -1,12 +1,5 @@
 console.log("loaded");
 
-// function openNav() {
-//   console.log("open clicked");
-//   // $("#mySidenav").css("width", "380px") ;
-//   // $("#main").css("marginLeft", "380px");
-// }
-
-
 $(function() {
   $("#includedBody").load("body.html");
   var source = $("#ge-template").html();
@@ -70,69 +63,36 @@ $(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
-    // $('#fullpage').fullpage();
-    $(".open-arrow").click(function(event){
-      console.log("open clicked");
-       alert("OPEN clicked");
-      $(".slide-in-mobile").animate({right:0},350);
-      $(".ge-mobile-btn").animate({left:"2%"},350);
-      $(".ge-section-title-mobile").animate({left:-200},350);
-      $(".ge-mobile-btn").removeClass("open-arrow");
-      $(".ge-mobile-btn").addClass("close-arrow");
-
-    });
+    $('#fullpage').fullpage();
 
     $(".close-arrow").click(function(event){
+      console.log(event);
       console.log("close clicked");
       alert("CLOSE clicked");
       $(".slide-in-mobile").animate({right:-300},350);
       $(".ge-mobile-btn").animate({left:300},350);;
       $(".ge-section-title-mobile").animate({left:0},350);
-      $(".ge-mobile-btn").removeClass("close-arrow");
-      $(".ge-mobile-btn").addClass("open-arrow");
+      $(event.target).removeClass("close-arrow");
+      $(event.target).addClass("open-arrow");
+
+    });
+
+    $(".open-arrow").click(function(event){
+      console.log("open clicked");
+      console.log(event);
+       alert("OPEN clicked");
+      $(".slide-in-mobile").animate({right:0},350);
+      $(".ge-mobile-btn").animate({left:"2%"},350);
+      $(".ge-section-title-mobile").animate({left:-200},350);
+      $(event.target).removeClass("open-arrow");
+      $(event.target).addClass("close-arrow");
 
     });
 
   }
-
-
-
-    // var position = $(window).scrollTop();
-    // $(window).scroll(function () {
-    //   console.log("scrolling with my homies");
-    //   var scroll = $(window).scrollTop();
-    //   console.log("scroll: " + scroll);
-    //   console.log("position: " + position);
-    //   if (scroll > position) {
-    //     console.log("I am scrolling down");
-    //     console.log(this);
-    //     var section = $(this).closest('.fullscreen').next();
-    //     var container = $(this).closest('.ge-main-container');
-    //     console.log("section");
-    //     console.log(section);
-    //     console.log("container");
-    //     console.log(container);
-    //     // container.animate({
-    //     //   scrollTop: container.scrollTop() + section.offset().top
-    //     // }, 700);
-    //   }
-    //
-    //   else {
-    //     console.log("I am scrolling up");
-    //     var fuller = $(this).closest('.fullscreen').prev(),
-    //         section = $(this).closest('.ge-main-container');
-    //
-    //     // section.animate({
-    //     //   scrollTop: section.scrollTop() + fuller.offset().top
-    //     // }, 700);
-    //   }
-
-    // });
-
-  // }
-  // else {
-  //   console.log("I am not on a Mobile Device");
-  // }
+  else {
+    console.log("I am not on a Mobile Device");
+  }
 });
 
 

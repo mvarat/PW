@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class ="ge-main-container">
+      <div id="fullpage">
       <!-- TABLET -->
       <img class="ge-tablet" src=./images/mobile/tablet-landing.jpg>
       <img class="ge-tablet-icon" src=./images/mobile/icon-ipad-rotate.png>
@@ -43,7 +44,7 @@
             {{#each sections}}
               <div id="{{class}}">
                 <img class="ge-main-img ge-{{class}}-img" src={{imageDesktop}}>
-                <img class="ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
+                <img class="section ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
                 <div class="ge-section-title-mobile">{{title}}</div>
                 <span class="ge-mobile-btn open-arrow")><div class="library-icomoon"><i class="icon-thin-arrow"></i></div></span>
                 <div class="img-credit">{{credit}}</div>
@@ -52,7 +53,9 @@
                     <div class="ge-mobile-section-hed">{{title}}</div>
                     <div class="mobile-features">
                       {{#each features}}
+                      {{#if imageLinkMobile}}
                         <img class="features-img-mobile " src={{imageLinkMobile}}>
+                      {{/if}}
                         <h1 class="ge-features-title-mobile">{{imageTitle}}</h1>
                         {{#if sponsored}}
                           <h5 class="ge-sponsored">sponsored</h5>
@@ -97,6 +100,7 @@
              {{/each}}
            </div>
        </script>
+     </div>
     </div>
   </body>
 </html>
