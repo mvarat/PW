@@ -72,8 +72,8 @@ $(function() {
   if (isMobile.matches) {
     // $('#fullpage').fullpage();
     $(".ge-mobile-arrow").click(function(event){
-      alert("I've been clicked");
-      // $("#slide").animate({width:'toggle'},350);
+      // alert("I've been clicked");
+      $(".slide-in-mobile").animate({right:0},350);
     });
 
   }
