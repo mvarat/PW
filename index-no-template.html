@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GE DESTIE</title>
+    <script src="handlebars-v4.0.5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class ="ge-main-container">
+      <!-- TABLET -->
+      <img class="ge-tablet" src=./images/mobile/tablet-landing.jpg>
+      <img class="ge-tablet-icon" src=./images/mobile/icon-ipad-rotate.png>
+      <h3 class="ge-tablet-text">Please turn your device to begin the viewing experience</h3>
+      <!-- END TABLET -->
+      <div class="ge-hed scroll">
+        <h1 class="ge-hed-line1">The Ultimate Guide To</h1>
+        <h1 class="ge-hed-line2">Styling Your Kitchen</h1>
+        <h1 class="ge-hed-line3">For those of you who get excited when you hear the words farmhouse sinks and open-shelving, get ready for our master guide to refreshing your kitchen from top to reclaimed-wood-floor bottom.</h1>
+        <h1 class="ge-hed-line4-mobile">See our tips</h1>
+      </div>
+      <div id="DocumentResults"></div>
+      <script id="ge-template" type="text/x-handlebars-template">
+          <div id="img-anchor"></div>
+          </br>
+          <div id="ge-nav-row">
+            <ul class="ge-nav">
+              {{#each sections}}
+                <a href="#img-anchor"><li class="ge-nav-item" id="ge-nav-{{class}}">{{title}}</li></a>
+              {{/each}}
+            </ul>
+          </div>
+        </br>
+          <div id="img">
+            {{#each sections}}
+              <div id="{{class}}">
+                <img class="ge-main-img ge-{{class}}-img" src={{imageDesktop}}>
+                  <div class="mobile-img-container">
+                    <img class="scroll ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
+                  </div>
+                  <div class="ge-section-title-mobile ge-section-title-{{class}}">{{title}}</div>
+                  <span id="ge-mobile-btn-{{class}}" class="ge-mobile-btn open-arrow"><div class="library-icomoon"><i class="icon-thin-arrow"></i></div></span>
+                  <div class="img-credit">{{credit}}</div>
+                <!-- MOBILE CONTENT -->
+                  <div class="slide-in-mobile slide-in-mobile-{{class}}">
+                    <div class="ge-mobile-section-hed">{{title}}</div>
+                    <div class="mobile-features">
+                      {{#each features}}
+                      {{#if imageLinkMobile}}
+                        <img class="features-img-mobile " src={{imageLinkMobile}}>
+                      {{/if}}
+                        <h1 class="ge-features-title-mobile">{{imageTitle}}</h1>
+                        {{#if sponsored}}
+                          <h5 class="ge-sponsored">sponsored</h5>
+                        {{/if}}
+                        <h4 class="ge-features-description-mobile">{{{imageCaption}}}</h4>
+                        <a class="ge-features-shop-mobile" href="{{shopLink}}" target="_blank">{{shop}}</a>
+                      {{/each}}
+                    </div>
+                  </div>
+                <!-- END MOBILE -->
+                {{#each features}}
+                  <button id="btn-{{num}}"class="ge-btns-overlay ge-btn pulse ge-{{class}}-btn" style="top:{{yval}};left:{{xval}};">+</button>
+                  <div id="modal-{{num}}" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close"><div class="library-icomoon"><i class="icon-plussign"></i></div></span>
+                        <div class="img-container">
+                          <img class="features-img" src={{imageLinkDesktop}}>
+                        </div>
+                        {{#if imageLinkDesktop}}
+                          <div class="ge-modal-text">
+                            <h3 class="ge-modal-title">{{title}}</h3>
+                            <h1 class="ge-modal-hed">{{imageTitle}}</h1>
+                            {{#if sponsored}}
+                              <h5 class="ge-sponsored">sponsored</h5>
+                            {{/if}}
+                            <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
+                            <a class="ge-modal-shop" href="{{shopLink}}" target="_blank">{{shop}}</a>
+                          </div>
+                          {{/if}}
+                          {{#unless imageLinkDesktop}}
+                          <div class="ge-modal-text">
+                            <h3 class="ge-modal-title">{{title}}</h3>
+                            <h1 class="ge-modal-hed">{{imageTitle}}</h1>
+                            <h4 class="ge-modal-description">{{{imageCaption}}}</h4>
+                          </div>
+                          {{/unless}}
+                        </div>
+                      </div>
+                  {{/each}}
+                </div>
+             {{/each}}
+           </div>
+       </script>
+    </div>
+  </body>
+</html>

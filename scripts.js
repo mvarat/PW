@@ -76,8 +76,8 @@ $(function() {
           $("#ge-mobile-btn-cc").addClass("close-arrow");
         }
         else {
-          console.log("does not have class open arrow");
-          $(".slide-in-mobile-cc").animate({right:-450},100);
+          console.log("has class close arrow");
+          $(".slide-in-mobile-cc").animate({right:-700},100);
           $("#ge-mobile-btn-cc").animate({left:"70%"},300);;
           $(".ge-section-title-cc").animate({left:40},300);
           $("#ge-mobile-btn-cc").removeClass("close-arrow");
@@ -97,7 +97,7 @@ $(function() {
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-op").animate({right:-450},100);
+          $(".slide-in-mobile-op").animate({right:-700},100);
           $("#ge-mobile-btn-op").animate({left:"70%"},300);;
           $(".ge-section-title-op").animate({left:40},300);
           $("#ge-mobile-btn-op").removeClass("close-arrow");
@@ -117,7 +117,7 @@ $(function() {
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-cs").animate({right:-450},100);
+          $(".slide-in-mobile-cs").animate({right:-700},100);
           $("#ge-mobile-btn-cs").animate({left:"70%"},300);;
           $(".ge-section-title-cs").animate({left:40},300);
           $("#ge-mobile-btn-cs").removeClass("close-arrow");
@@ -138,7 +138,7 @@ $(function() {
         }
         else {
           console.log("does not have class open arrow");
-          $(".slide-in-mobile-bn").animate({right:-450},100);
+          $(".slide-in-mobile-bn").animate({right:-700},100);
           $("#ge-mobile-btn-bn").animate({left:"70%"},300);;
           $(".ge-section-title-bn").animate({left:40},300);
           $("#ge-mobile-btn-bn").removeClass("close-arrow");
