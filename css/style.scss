@@ -16,8 +16,8 @@ body {
 .ge-main-container {
   margin: auto;
 	width: 1280px;
-	padding-left: 0;
-	padding-right: 0;
+  margin-top: 60px;
+
 	@media (max-width: 1280px) {
 		width: 100%;
 	}
@@ -448,12 +448,12 @@ a {
     .ge-hed {
       margin: 0;
       padding: 0;
-      margin-top: 62px;
+      // margin-top: 60px;
       max-width: 100vw;
       text-align: center;
       background-image: url(../images/mobile/header-image-mobile.png);
       background-size: cover;
-      height: calc(100vh - 62px);
+      height: calc(100vh - 12px);
     }
 
     h1  {
@@ -532,13 +532,8 @@ a {
 
     .ge-main-container {
       overflow-x: hidden;
-      // position: absolute;
-      // top: 0;
-      // width: 100%;
-      // height: 100%;
-      // scroll-snap-points-x: repeat(100%);
-      // scroll-snap-type: mandatory;
-      // scroll-snap-destination: 100% 0%;
+      margin: 0;
+      padding: 0;
     }
 
     .ge-section-title-mobile {
