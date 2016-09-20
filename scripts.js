@@ -146,24 +146,6 @@ $(function() {
         }
       });
 
-
-
-    // $("ge-mobile-btn-cc").click(function(event){
-    //   console.log("open clicked");
-    //   console.log(event.target);
-    //    alert("OPEN clicked");
-    //   $(".slide-in-mobile").animate({right:0},350);
-    //   $(event.target).animate({left:"2%"},350);
-    //   $(".ge-section-title-mobile").animate({left:-200},350);
-    //   console.log(event.target.next);
-    //   // $(".ge-section-title-mobile").animate({left:-200},350);
-    //   $(event.target).removeClass("open-arrow");
-    //   $(event.target).addClass("close-arrow");
-    // });
-
-
-
-
   }
   else {
     console.log("I am not on a Mobile Device");
@@ -341,7 +323,7 @@ var data = {
                     imageTitle: "Add Wood for Warmth",
                     title: "Clever Storage",
                     imageCaption: "An all-marble or stainless-steel kitchen is super-cool, but it can come across as a smidgen austere. Warm up your space with natural elements, like reclaimed-wood cabinets and a stone backsplash, while still keeping that marble countertop you love. Word to the wise: You’ll want to protect those cabinets twice a year with a sealant.",
-                    shop: "Food52 ($80)",
+                    shop: "West Elm ($1,199)",
                     shopLink: "http://products.geappliances.com/appliance/gea-specs/PVW7301EJES",
                 },
                 {

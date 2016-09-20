@@ -413,7 +413,8 @@ a {
 .ge-mobile-open,
 .mobile-features,
 .ge-mobile-section-hed,
-.mobile-img-container{
+.mobile-img-container,
+.icon-thin-arrow {
   display: none;
 }
 
@@ -560,6 +561,7 @@ a {
   }
 
   .icon-thin-arrow {
+    display: block;
     color: white;
     text-align: center;
     font-weight: bold;

@@ -350,7 +350,8 @@ a {
 .ge-mobile-open,
 .mobile-features,
 .ge-mobile-section-hed,
-.mobile-img-container {
+.mobile-img-container,
+.icon-thin-arrow {
   display: none; }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -466,6 +467,7 @@ a {
     bottom: 10px; }
 
   .icon-thin-arrow {
+    display: block;
     color: white;
     text-align: center;
     font-weight: bold;
