@@ -408,7 +408,12 @@ a {
   display: none;
 }
 
-.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-open, .mobile-features, .ge-mobile-section-hed {
+.ge-img-mobile,
+.ge-section-title-mobile,
+.ge-mobile-open,
+.mobile-features,
+.ge-mobile-section-hed,
+.mobile-img-container{
   display: none;
 }
 
@@ -497,10 +502,19 @@ a {
   }
 
   .ge-img-mobile {
+   display: block;
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+   opacity: .8;
+  }
+
+  // adds opacity to section image
+  .mobile-img-container {
+    background: black;
     display: block;
     height: 100vh;
     width: 100vw;
-    z-index: 1000;
   }
 
   #img {
@@ -582,6 +596,7 @@ a {
     position: relative;
   }
 
+  // product images in slide in
   .features-img-mobile {
     width: 100%;
   }
@@ -599,23 +614,24 @@ a {
   }
 
   .ge-features-description-mobile {
-      // float: right;
-      // width: 45%;
       text-align: left;
-      // padding: 35px 60px 5px 5px;
       font-size: 14.75px;
       line-height: 1.39;
-      // margin: 0px;
       font-family: "freight-text-pro";
       font-weight: 400;
       color: #7B7A7A;
       text-decoration: none;
+      margin: 0;
+      margin-bottom: 10px;
   }
 
+  // where to purchase link and price
   .ge-features-shop-mobile {
-
+    padding-bottom: 20px;
+    display: block;
   }
 
+  // section title on slide in
   .ge-mobile-section-hed {
     display: block;
     height: 50px;
@@ -629,6 +645,7 @@ a {
     padding-top: 25px;
   }
 
+  // slide in for each section
   .slide-in-mobile {
     height: 100vh;
     overflow: scroll;

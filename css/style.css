@@ -345,7 +345,12 @@ a {
   top: 50%;
   display: none; }
 
-.ge-img-mobile, .ge-section-title-mobile, .ge-mobile-open, .mobile-features, .ge-mobile-section-hed {
+.ge-img-mobile,
+.ge-section-title-mobile,
+.ge-mobile-open,
+.mobile-features,
+.ge-mobile-section-hed,
+.mobile-img-container {
   display: none; }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -414,7 +419,14 @@ a {
     display: block;
     height: 100vh;
     width: 100vw;
-    z-index: 1000; }
+    position: relative;
+    opacity: .8; }
+
+  .mobile-img-container {
+    background: black;
+    display: block;
+    height: 100vh;
+    width: 100vw; }
 
   #img {
     display: block;
@@ -506,7 +518,13 @@ a {
     font-family: "freight-text-pro";
     font-weight: 400;
     color: #7B7A7A;
-    text-decoration: none; }
+    text-decoration: none;
+    margin: 0;
+    margin-bottom: 10px; }
+
+  .ge-features-shop-mobile {
+    padding-bottom: 20px;
+    display: block; }
 
   .ge-mobile-section-hed {
     display: block;
