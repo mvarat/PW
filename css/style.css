@@ -439,14 +439,7 @@ a {
     display: block; }
 
   .ge-main-container {
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    scroll-snap-points-x: repeat(100%);
-    scroll-snap-type: mandatory;
-    scroll-snap-destination: 100% 0%; }
+    overflow-x: hidden; }
 
   .ge-section-title-mobile {
     display: block;
