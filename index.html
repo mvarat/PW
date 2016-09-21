@@ -1851,19 +1851,19 @@ $(document).ready(function()
  # McNote: BEGIN: Insert page specific <body> stuff here
  ######################################################################################################################################
 -->
-<div class="docScroller">
  <div class ="ge-main-container">
  	<!-- TABLET -->
  	<img class="ge-tablet" src=./images/mobile/tablet-landing.jpg>
  	<img class="ge-tablet-icon" src=./images/mobile/icon-ipad-rotate.png>
  	<h3 class="ge-tablet-text">Please turn your device to begin the viewing experience</h3>
  	<!-- END TABLET -->
- 	<div class="ge-hed page">
+ 	<div class="ge-hed">
  		<h1 class="ge-hed-line1">The Ultimate Guide To</h1>
  		<h1 class="ge-hed-line2">Styling Your Kitchen</h1>
 		<div id="img-anchor"></div>
  		<h1 class="ge-hed-line3">For those of you who get excited when you hear the words farmhouse sinks and open-shelving, get ready for our master guide to refreshing your kitchen from top to reclaimed-wood-floor bottom.</h1>
  		<h1 class="ge-hed-line4-mobile">See our tips</h1>
+		<span class="ge-scroll-down"><div class="library-icomoon"><i class="icon-thin-down-arrow"></i></div></span>
  	</div>
  	<div id="DocumentResults"></div>
  	<script id="ge-template" type="text/x-handlebars-template">
@@ -1881,7 +1881,7 @@ $(document).ready(function()
  					<div id="{{class}}">
  						<img class="ge-main-img ge-{{class}}-img" src={{imageDesktop}}>
  							<div class="mobile-img-container">
- 								<img class="page ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
+ 								<img class="ge-img-mobile ge-{{class}}-img-mobile" src={{imageMobile}}>
  							</div>
  							<div class="ge-section-title-mobile ge-section-title-{{class}}">{{title}}</div>
  							<span id="ge-mobile-btn-{{class}}" class="ge-mobile-btn open-arrow"><div class="library-icomoon"><i class="icon-thin-arrow"></i></div></span>
@@ -1913,8 +1913,7 @@ $(document).ready(function()
  										<div class="img-container">
  											<img class="features-img" src={{imageLinkDesktop}}>
  										</div>
- 										{{#if imageLinkDesktop}}
- 											<div class="ge-modal-text">
+ 											<div class="ge-modal-text{{noImage}}">
  												<h3 class="ge-modal-title">{{title}}</h3>
  												<h1 class="ge-modal-hed">{{imageTitle}}</h1>
  												{{#if sponsored}}
@@ -1923,14 +1922,6 @@ $(document).ready(function()
  												<h4 class="ge-modal-description">{{{imageCaption}}}</h4>
  												<a class="ge-modal-shop" href="{{shopLink}}" target="_blank">{{shop}}</a>
  											</div>
- 											{{/if}}
- 											{{#unless imageLinkDesktop}}
- 											<div class="ge-modal-text">
- 												<h3 class="ge-modal-title">{{title}}</h3>
- 												<h1 class="ge-modal-hed">{{imageTitle}}</h1>
- 												<h4 class="ge-modal-description">{{{imageCaption}}}</h4>
- 											</div>
- 											{{/unless}}
  										</div>
  									</div>
  							{{/each}}
@@ -1938,7 +1929,6 @@ $(document).ready(function()
  				 {{/each}}
  			 </div>
  	 </script>
- </div>
  </div>
  <!--
  ######################################################################################################################################

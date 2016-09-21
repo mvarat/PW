@@ -13,62 +13,53 @@ $(function() {
   $('#ge-nav-cc').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
     $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
-    console.log("add active class to cc");
     $('#cc').addClass('active');
     $('#ge-nav-cc').addClass('active');
   });
   $('#ge-nav-op').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
     $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
-    console.log("add active class to op");
     $('#op').addClass('active');
     $('#ge-nav-op').addClass('active');
   });
   $('#ge-nav-cs').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
     $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
-    console.log("add active class to cs");
     $('#cs').addClass('active');
     $('#ge-nav-cs').addClass('active');
   });
   $('#ge-nav-bn').click(function(){
     $('#cc, #op, #cs, #bn').removeClass('active');
     $('#ge-nav-cc, #ge-nav-op, #ge-nav-cs, #ge-nav-bn').removeClass('active');
-    console.log("add active class to bn");
     $('#bn').addClass('active');
     $('#ge-nav-bn').addClass('active');
   });
 
   // open modal
   $("button").click(function(event){
-    console.log("button clicked");
     $(event.target).next(".modal").css("display","block");
   });
 
   // close modal
   $(".close").click(function(event){
-    console.log("modal closed");
     $(".modal").css("display","none");
   });
 
   // close modal when you click outside modal
   window.onclick = function(event) {
     if ($(event.target).hasClass("modal")) {
-      console.log("window clicked");
       $(".modal").css("display", "none");
     }
   }
 
   // checks if being viewed on mobile
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-  console.log("Is Mobile: " + isMobile.matches);
   if (isMobile.matches) {
     $('#fullpage').fullpage();
 
       // creative cabinets pen and close
       $("#ge-mobile-btn-cc").click(function(event){
         if ( $("#ge-mobile-btn-cc").hasClass("open-arrow") ) {
-          console.log("has class open arrow");
           $(".slide-in-mobile-cc").animate({right:0},100);
           $("#ge-mobile-btn-cc").animate({left:"2%"},300);
           $(".ge-section-title-cc").animate({left:-250},300);
@@ -76,7 +67,6 @@ $(function() {
           $("#ge-mobile-btn-cc").addClass("close-arrow");
         }
         else {
-          console.log("has class close arrow");
           $(".slide-in-mobile-cc").animate({right:-700},100);
           $("#ge-mobile-btn-cc").animate({left:"70%"},300);;
           $(".ge-section-title-cc").animate({left:40},300);
@@ -88,7 +78,6 @@ $(function() {
       // organized pantry open and close
       $("#ge-mobile-btn-op").click(function(event){
         if ( $("#ge-mobile-btn-op").hasClass("open-arrow") ) {
-          console.log("has class open arrow");
           $(".slide-in-mobile-op").animate({right:0},100);
           $("#ge-mobile-btn-op").animate({left:"2%"},300);
           $(".ge-section-title-op").animate({left:-250},300);
@@ -96,7 +85,6 @@ $(function() {
           $("#ge-mobile-btn-op").addClass("close-arrow");
         }
         else {
-          console.log("does not have class open arrow");
           $(".slide-in-mobile-op").animate({right:-700},100);
           $("#ge-mobile-btn-op").animate({left:"70%"},300);;
           $(".ge-section-title-op").animate({left:40},300);
@@ -108,7 +96,6 @@ $(function() {
       // clever storage open and close
       $("#ge-mobile-btn-cs").click(function(event){
         if ( $("#ge-mobile-btn-cs").hasClass("open-arrow") ) {
-          console.log("has class open arrow");
           $(".slide-in-mobile-cs").animate({right:0},100);
           $("#ge-mobile-btn-cs").animate({left:"2%"},300);
           $(".ge-section-title-cs").animate({left:-250},300);
@@ -116,7 +103,6 @@ $(function() {
           $("#ge-mobile-btn-cs").addClass("close-arrow");
         }
         else {
-          console.log("does not have class open arrow");
           $(".slide-in-mobile-cs").animate({right:-700},100);
           $("#ge-mobile-btn-cs").animate({left:"70%"},300);;
           $(".ge-section-title-cs").animate({left:40},300);
@@ -129,7 +115,6 @@ $(function() {
       // breakfast nook open and close
       $("#ge-mobile-btn-bn").click(function(event){
         if ( $("#ge-mobile-btn-bn").hasClass("open-arrow") ) {
-          console.log("has class open arrow");
           $(".slide-in-mobile-bn").animate({right:0},100);
           $("#ge-mobile-btn-bn").animate({left:"2%"},300);
           $(".ge-section-title-bn").animate({left:-250},300);
@@ -137,7 +122,6 @@ $(function() {
           $("#ge-mobile-btn-bn").addClass("close-arrow");
         }
         else {
-          console.log("does not have class open arrow");
           $(".slide-in-mobile-bn").animate({right:-700},100);
           $("#ge-mobile-btn-bn").animate({left:"70%"},300);;
           $(".ge-section-title-bn").animate({left:40},300);
@@ -147,9 +131,7 @@ $(function() {
       });
 
   }
-  else {
-    console.log("I am not on a Mobile Device");
-  }
+
 });
 
 
@@ -251,6 +233,7 @@ var data = {
                       xval: "50%",
                       yval: "25%",
                       imageTitle: "Check In Seasonally",
+                      noImage: "-no-img",
                       title: "Organized Pantry",
                       imageCaption: "Twice a year, do a complete cabinet overhaul. First things first, clear everything out like you did when you <a href='http://www.purewow.com/home/The-Best-Way-to-Clean-Out-Your-Closet' target='_blank'>KonMari’d your closet</a>. Then make sure you're <a href='http://www.purewow.com/food/21-Staples-You-Should-Always-Have-in-Your-Pantry' target='_blank'>fully stocked with all the essentials</a>. Finally, hone in on the seasonal items. In the springtime, donate all those soup fixin’s you’ve acquired and replace them with your salad add-ons. Once autumn rolls around, ease up on the dried apricots and bring on the <a href='http://www.purewow.com/recipes/Homemade-Cinnamon-Applesauce-Recipe' target='_blank'>homemade applesauce.<a>",
                       shop: "",

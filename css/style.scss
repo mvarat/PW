@@ -282,9 +282,10 @@ button {
   transform: translate(-50%, -50%);
 }
 
+// modal style with image
 .ge-modal-text {
   float: right;
-  width: 45%;
+  width: 55%;
   text-align: left;
   padding: 35px 60px 5px 5px;
   color: #5D5E61;
@@ -296,6 +297,23 @@ button {
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
 }
+
+// modal style with no image
+.ge-modal-text-no-img {
+  float: right;
+  width: 95%;
+  text-align: left;
+  padding: 35px 60px 5px 5px;
+  color: #5D5E61;
+  font-size: 14.75px;
+  line-height: 1.39;
+  margin: 0px;
+  font-family: "freight-text-pro";
+  font-weight: 400;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 .ge-modal-title {
     font-size: 9.25px;
@@ -355,6 +373,7 @@ a {
 }
 
 .ge-modal-description {
+  font-size: 14.75px;
   margin: 0;
   margin-bottom: 13px;
   font-weight: lighter;
@@ -414,7 +433,8 @@ a {
 .mobile-features,
 .ge-mobile-section-hed,
 .mobile-img-container,
-.icon-thin-arrow {
+.icon-thin-arrow,
+.ge-scroll-down {
   display: none;
 }
 
@@ -453,23 +473,46 @@ a {
 // MOBILE
 @media (max-width: 767px) {
 
-  .docScroller {
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    scroll-snap-points-y: repeat(100%);
-    scroll-snap-type: mandatory;
-    scroll-snap-destination: 100% 0%;
+  .ge-scroll-down {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 0 auto;
+
+    .icon-thin-down-arrow {
+      display: block;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      position: relative;
+      font-size: 20px;
+      z-index: 30;
+      transform: rotate(90deg);
+      top: 10px;
+      &:before {
+        content: "\e636";
+      }
+    }
   }
 
-//   .page {
-//   float: left;
-//   width: 100vw;
-//   height: 100vh;
-// }
+  .icon-thin-arrow {
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    font-size: 30px;
+    top: 13px;
+    left: 11px;
+    z-index: 30;
+    &:before {
+      content: "\e636";
+    }
+  }
+
+
 
   @media (orientation: portrait) {
     .ge-hed {
@@ -590,19 +633,6 @@ a {
       bottom: 10px;
     }
 
-    .icon-thin-arrow {
-      display: block;
-      color: white;
-      text-align: center;
-      font-weight: bold;
-      position: absolute;
-      font-size: 30px;
-      top: 13px;
-      left: 11px;
-      &:before {
-        content: "\e636";
-      }
-    }
 
     .ge-mobile-btn {
       z-index: 101;
@@ -821,19 +851,6 @@ a {
       bottom: 10px;
     }
 
-    .icon-thin-arrow {
-      display: block;
-      color: white;
-      text-align: center;
-      font-weight: bold;
-      position: absolute;
-      font-size: 30px;
-      top: 13px;
-      left: 11px;
-      &:before {
-        content: "\e636";
-      }
-    }
 
     .ge-mobile-btn {
       z-index: 101;
