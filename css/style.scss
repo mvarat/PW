@@ -420,6 +420,7 @@ a {
 
 // TABLET
 @media (min-width: 768px) and (max-width: 1024px) {
+
   html, body {
     // no scroll if portrait
     @media (orientation: portrait) {
@@ -433,9 +434,17 @@ a {
     }
   }
 
+
+
   @media (orientation: portrait) {
-    .ge-tablet, .ge-tablet-icon, .ge-tablet-text {
+    .ge-tablet,
+    .ge-tablet-icon,
+    .ge-tablet-text {
       display: block;
+    }
+    .ge-hed,
+    #DocumentResults{
+      display: none;
     }
   }
 
@@ -458,7 +467,7 @@ a {
 
     h1  {
       &.ge-hed-line1 {
-        padding-top: 40%;
+        padding-top: 56%;
         font-family: "brandon-grotesque";
         text-transform: uppercase;
         font-size: 12.5px;
@@ -725,8 +734,9 @@ a {
 
     .ge-img-mobile {
       display: block;
-      // height: 100vh;
+      height: calc(100vh - 62px);
       width: 100%;
+      background-size: auto;
       position: relative;
       opacity: .8;
     }
@@ -735,9 +745,19 @@ a {
     .mobile-img-container {
       background: black;
       display: block;
-      height: 100vh;
+      height: calc(100vh - 62px);
       width: 100vw;
+      overflow: hidden;
     }
+
+    .ge-img-mobile {
+      display: block;
+      // width: 100%;
+      // background-size: auto;
+      // position: relative;
+      opacity: .8;
+    }
+
 
     #img {
       display: block;
@@ -752,13 +772,8 @@ a {
 
     .ge-main-container {
       overflow-x: hidden;
-      // position: absolute;
-      // top: 0;
-      // width: 100%;
-      // height: 100%;
-      // scroll-snap-points-x: repeat(100%);
-      // scroll-snap-type: mandatory;
-      // scroll-snap-destination: 100% 0%;
+      margin: 0;
+      padding: 0;
     }
 
     .ge-section-title-mobile {
@@ -877,7 +892,7 @@ a {
 
     // slide in for each section
     .slide-in-mobile {
-      height: 100vh;
+      height: calc(100vh - 62px);
       overflow: scroll;
       width: 70%;
       background-color: white;

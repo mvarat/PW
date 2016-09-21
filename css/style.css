@@ -363,8 +363,14 @@ a {
     height: auto; } }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .ge-tablet, .ge-tablet-icon, .ge-tablet-text {
-    display: block; } }
+  .ge-tablet,
+  .ge-tablet-icon,
+  .ge-tablet-text {
+    display: block; }
+
+  .ge-hed,
+  #DocumentResults {
+    display: none; } }
 @media (max-width: 767px) and (orientation: portrait) {
   .ge-hed {
     margin: 0;
@@ -376,7 +382,7 @@ a {
     height: calc(100vh - 12px); }
 
   h1.ge-hed-line1 {
-    padding-top: 40%;
+    padding-top: 56%;
     font-family: "brandon-grotesque";
     text-transform: uppercase;
     font-size: 12.5px;
@@ -605,15 +611,22 @@ a {
 
   .ge-img-mobile {
     display: block;
+    height: calc(100vh - 62px);
     width: 100%;
+    background-size: auto;
     position: relative;
     opacity: .8; }
 
   .mobile-img-container {
     background: black;
     display: block;
-    height: 100vh;
-    width: 100vw; }
+    height: calc(100vh - 62px);
+    width: 100vw;
+    overflow: hidden; }
+
+  .ge-img-mobile {
+    display: block;
+    opacity: .8; }
 
   #img {
     display: block;
@@ -625,7 +638,9 @@ a {
     display: block; }
 
   .ge-main-container {
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0; }
 
   .ge-section-title-mobile {
     display: block;
@@ -728,7 +743,7 @@ a {
     padding-bottom: 42px; }
 
   .slide-in-mobile {
-    height: 100vh;
+    height: calc(100vh - 62px);
     overflow: scroll;
     width: 70%;
     background-color: white;
