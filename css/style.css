@@ -302,7 +302,8 @@ a {
     color: #aeadad; }
 
 .italic {
-  font-style: italic; }
+  font-style: italic;
+  display: inline; }
 
 .ge-modal-shop {
   font-weight: 600;
